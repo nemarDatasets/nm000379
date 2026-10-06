@@ -1,0 +1,28 @@
+{
+  "TaskName": "scenerecognition",
+  "TaskDescription": "Scene recognition memory task (Presentation 18.0): per block, study of 24 novel natural scenes (Microsoft COCO 2017 train images with people, animals or food; 8 per category) followed by a recognition test, with concurrent EyeLink 1000 eye tracking. Each run is one block as exported by the authors (file *_sl_block<N>.m00).",
+  "InstitutionName": "Northwestern Memorial Hospital Comprehensive Epilepsy Center",
+  "InstitutionAddress": "Chicago, IL, USA",
+  "Manufacturer": "Nihon Kohden",
+  "SamplingFrequency": 2000.0,
+  "PowerLineFrequency": 60,
+  "HardwareFilters": {
+    "BandpassFilter": {
+      "Description": "Recorded signals were bandpass-filtered from 0.6 to 600 Hz (Kragel et al. 2021)",
+      "LowCutoff": 0.6,
+      "HighCutoff": 600
+    }
+  },
+  "SoftwareFilters": "n/a",
+  "iEEGReference": "Clinical reference and ground: a surgically implanted electrode strip facing the scalp or a scalp electrode (Kragel et al. 2021); channel names give the reference label (REF1 / Ref1). Bipolar re-referencing and DFT line-noise removal of the paper were NOT applied.",
+  "ElectrodeManufacturer": "AD-TECH Medical Instrument Co., Racine, WI",
+  "iEEGElectrodeInfo": "Stereotactic EEG depth electrodes, contacts spaced 5 to 10 mm apart (Kragel et al. 2021)",
+  "iEEGPlacementScheme": "Clinically determined depth electrodes with hippocampal coverage (inclusion criterion)",
+  "SEEGChannelCount": 102,
+  "EEGChannelCount": 0,
+  "ECOGChannelCount": 0,
+  "MiscChannelCount": 0,
+  "TriggerChannelCount": 1,
+  "RecordingType": "continuous",
+  "RecordingDuration": 548.0
+}

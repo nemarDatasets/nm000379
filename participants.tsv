@@ -1,0 +1,7 @@
+participant_id	source_id	age	sex	group	n_runs
+sub-01	S1	n/a	n/a	patient	8
+sub-02	S2	n/a	n/a	patient	8
+sub-03	S3	n/a	n/a	patient	3
+sub-04	S4	n/a	n/a	patient	3
+sub-05	S5	n/a	n/a	patient	4
+sub-06	S6	n/a	n/a	patient	5

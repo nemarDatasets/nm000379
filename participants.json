@@ -1,0 +1,28 @@
+{
+  "participant_id": {
+    "Description": "BIDS label = number of the release folder S<N>"
+  },
+  "source_id": {
+    "Description": "Participant folder in the release (data/*/S<N>)"
+  },
+  "age": {
+    "Description": "Not reported per participant. Group: average age 29 years (range 24 to 38) (Kragel et al. 2021, Participants)",
+    "Units": "year"
+  },
+  "sex": {
+    "Description": "Not reported per participant. Group: six participants, three females (Kragel et al. 2021, Participants)",
+    "Levels": {
+      "M": "male",
+      "F": "female"
+    }
+  },
+  "group": {
+    "Description": "Patients with medically refractory epilepsy with depth electrodes including hippocampus",
+    "Levels": {
+      "patient": "epilepsy patient"
+    }
+  },
+  "n_runs": {
+    "Description": "Number of task blocks (runs) with iEEG in the release"
+  }
+}

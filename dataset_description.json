@@ -1,0 +1,51 @@
+{
+  "Name": "Rapid coordination of effective learning by the human hippocampus: intracranial EEG during scene recognition with eye tracking",
+  "BIDSVersion": "1.10.0",
+  "DatasetType": "raw",
+  "License": "CC-BY-4.0",
+  "Authors": [
+    "James E. Kragel",
+    "Stephan Schuele",
+    "Stephen VanHaerents",
+    "Joshua M. Rosenow",
+    "Joel L. Voss"
+  ],
+  "Acknowledgements": "Data release: Zenodo record 4728229 v1.0.0 (Kragel, Schuele, VanHaerents, Rosenow, Voss). BIDS conversion: ieeg-nemar-20261005 campaign (batch-2 Zenodo lane); no signal processing applied.",
+  "HowToAcknowledge": "Please cite Kragel JE, Schuele S, VanHaerents S, Rosenow JM, Voss JL (2021) Rapid coordination of effective learning by the human hippocampus. Sci Adv 7(25):eabf7144. doi:10.1126/sciadv.abf7144, and the data record doi:10.5281/zenodo.4728229.",
+  "Funding": [
+    "National Institute of Neurological Disorders and Stroke T32NS047987",
+    "National Institute of Neurological Disorders and Stroke R01NS113804"
+  ],
+  "EthicsApprovals": [
+    "Informed consent was required before participation in the research protocol in accordance with the Northwestern University Institutional Review Board (Kragel et al. 2021, Methods)."
+  ],
+  "ReferencesAndLinks": [
+    "https://doi.org/10.1126/sciadv.abf7144",
+    "https://doi.org/10.5281/zenodo.4728229",
+    "https://cocodataset.org"
+  ],
+  "DatasetDOI": "doi:10.5281/zenodo.4728229",
+  "Keywords": [
+    "intracranial EEG",
+    "stereo-EEG",
+    "hippocampus",
+    "eye movements",
+    "theta",
+    "episodic memory",
+    "learning and memory",
+    "scene recognition"
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "doi:10.5281/zenodo.4728229",
+      "URL": "https://zenodo.org/records/4728229",
+      "Version": "1.0.0 (2021-06-18)"
+    }
+  ],
+  "GeneratedBy": [
+    {
+      "Name": "b2zen_convert041.py",
+      "Description": "Lossless re-packaging of the Nihon Kohden ASCII exports (2-decimal uV) into BrainVision INT_32 (resolution 0.01 uV); no filtering, resampling, re-referencing or channel removal."
+    }
+  ]
+}

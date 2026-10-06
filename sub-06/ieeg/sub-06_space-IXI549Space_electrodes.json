@@ -1,0 +1,17 @@
+{
+  "group": {
+    "Description": "Electrode shaft: contact name without its trailing contact number"
+  },
+  "source_label_column": {
+    "Description": "Column 'label' of the authors' S<N>_mni.csv, copied as is (meaning not documented)"
+  },
+  "source_t": {
+    "Description": "Column 't' of the authors' S<N>_mni.csv, copied as is (meaning not documented)"
+  },
+  "source_mass": {
+    "Description": "Column 'mass' of the authors' S<N>_mni.csv, copied as is (meaning not documented)"
+  },
+  "source_count": {
+    "Description": "Column 'count' of the authors' S<N>_mni.csv, copied as is (meaning not documented)"
+  }
+}

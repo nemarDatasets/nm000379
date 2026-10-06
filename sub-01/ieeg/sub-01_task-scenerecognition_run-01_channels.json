@@ -1,0 +1,8 @@
+{
+  "source_label": {
+    "Description": "Channel label token exactly as in line 2 of the Nihon Kohden ASCII export (may contain the export's * flag characters)"
+  },
+  "reference": {
+    "Description": "Reference electrode label, the part of the channel name after the hyphen"
+  }
+}
