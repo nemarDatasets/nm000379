@@ -1,0 +1,154 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "James E. Kragel": {
+      "orcid": "0000-0002-3240-6203",
+      "affiliations": [
+        {
+          "name": "Northwestern University Feinberg School of Medicine"
+        }
+      ]
+    },
+    "Stephan Schuele": {},
+    "Stephen VanHaerents": {
+      "orcid": "0000-0003-0759-4414",
+      "affiliations": [
+        {
+          "name": "Ken and Ruth Davee Department of Neurology, Northwestern University Feinberg School of Medicine, Chicago, IL 60611, USA."
+        }
+      ]
+    },
+    "Joshua M. Rosenow": {
+      "orcid": "0000-0001-7726-2496",
+      "affiliations": [
+        {
+          "name": "Department of Neurological Surgery, Northwestern University Feinberg School of Medicine, Chicago, IL 60611, USA."
+        }
+      ]
+    },
+    "Joel L. Voss": {
+      "orcid": "0000-0003-4180-9335",
+      "affiliations": [
+        {
+          "name": "Interdepartmental Neuroscience Program, Northwestern University Feinberg School of Medicine, Chicago, IL 60611, USA."
+        },
+        {
+          "name": "Department of Medical Social Sciences, Northwestern University Feinberg School of Medicine, Chicago, IL 60611, USA."
+        },
+        {
+          "name": "Ken and Ruth Davee Department of Neurology, Northwestern University Feinberg School of Medicine, Chicago, IL 60611, USA."
+        }
+      ]
+    }
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.4728229",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "10.1126/sciadv.abf7144",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000379",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000379",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "funding_references": [
+    {
+      "funder_name": "National Institute of Neurological Disorders and Stroke",
+      "award_number": "T32NS047987"
+    },
+    {
+      "funder_name": "National Institute of Neurological Disorders and Stroke",
+      "award_number": "R01NS113804"
+    }
+  ],
+  "title": "Rapid coordination of effective learning by the human hippocampus: intracranial EEG during scene recognition with eye tracking",
+  "license": "CC-BY-4.0",
+  "dataset_type": "raw",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "ieeg"
+  ],
+  "resource_type_specific": "iEEG Dataset",
+  "sizes": [
+    "41.69 GB (173 files)"
+  ],
+  "formats": [
+    ".b2zen_unzipped",
+    ".cpp",
+    ".csv",
+    ".def",
+    ".dll",
+    ".doc",
+    ".docx",
+    ".edf",
+    ".eeg",
+    ".exe",
+    ".framework/Versions/A/edfapi",
+    ".framework/Versions/Current/edfapi",
+    ".framework/edfapi",
+    ".gitignore",
+    ".h",
+    ".html",
+    ".jpg",
+    ".json",
+    ".lib",
+    ".m",
+    ".m00",
+    ".mat",
+    ".md",
+    ".mexmaci64",
+    ".mexw32",
+    ".mexw64",
+    ".mlx",
+    ".pdf",
+    ".plist",
+    ".png",
+    ".rtf",
+    ".tsv",
+    ".txt",
+    ".vhdr",
+    ".vmrk",
+    ".zip"
+  ],
+  "description": "Stereo-EEG recordings from six patients with medically refractory epilepsy performing a scene recognition memory task with concurrent EyeLink eye tracking. Depth electrodes including the hippocampus were implanted for neurosurgical monitoring. The dataset supports investigation of how the human hippocampus rapidly coordinates effective learning, and is a lossless iEEG-BIDS re-packaging of the authors' Zenodo release.",
+  "methods_description": "Nihon Kohden amplifier recordings at 1 or 2 kHz with a hardware band-pass of 0.6-600 Hz, using AD-TECH depth electrodes. Participants studied sequences of 24 natural scene images across eight blocks, followed by a recognition test, while eye movements were tracked with EyeLink. Electrode contacts were localized in MNI space using SPM12 normalization and Bioimage Suite. ASCII exports were converted losslessly to BrainVision format.",
+  "keywords": [
+    {
+      "term": "intracranial EEG"
+    },
+    {
+      "term": "stereo-EEG"
+    },
+    {
+      "term": "Hippocampus",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D006624"
+    },
+    {
+      "term": "eye tracking"
+    },
+    {
+      "term": "theta rhythm"
+    },
+    {
+      "term": "episodic memory"
+    },
+    {
+      "term": "scene recognition"
+    }
+  ],
+  "source_hash": "8de9a066d157dee197dd48b631e903ed34401fada97a4286660ecffb202ef1f7"
+}
