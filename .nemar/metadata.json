@@ -1,6 +1,11 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
+  "title": "Rapid coordination of effective learning by the human hippocampus: intracranial EEG during scene recognition with eye tracking",
+  "description": "Stereo-EEG recordings from six patients with medically refractory epilepsy performing a scene recognition memory task with concurrent EyeLink eye tracking. Depth electrodes included the hippocampus, and the data support investigation of how the hippocampus coordinates learning during revisitation of scenes. The dataset is a lossless iEEG-BIDS re-packaging of the authors' public Zenodo release, with behavioral arrays, eye-tracking files, electrode localizations and analysis code in sourcedata.",
+  "methods_description": "Participants studied sequences of 24 natural scene images (Microsoft COCO) across eight blocks, followed by a recognition test with gaze-contingent viewing and repeated vs. novel judgments. Stereo-EEG was recorded with a Nihon Kohden amplifier at 1 or 2 kHz using AD-TECH depth electrodes, and eye movements were recorded at 500 Hz with an EyeLink 1000. The original ASCII exports were converted losslessly to BrainVision format.",
+  "license": "CC-BY-4.0",
+  "dataset_type": "raw",
   "authors": {
     "James E. Kragel": {
       "orcid": "0000-0002-3240-6203",
@@ -42,6 +47,38 @@
       ]
     }
   },
+  "keywords": [
+    {
+      "term": "intracranial EEG"
+    },
+    {
+      "term": "stereo-EEG"
+    },
+    {
+      "term": "Hippocampus",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D006624"
+    },
+    {
+      "term": "Eye Movements",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D005133"
+    },
+    {
+      "term": "episodic memory"
+    },
+    {
+      "term": "scene recognition"
+    },
+    {
+      "term": "theta oscillations"
+    },
+    {
+      "term": "Drug Resistant Epilepsy",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D000069279"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.5281/zenodo.4728229",
@@ -62,6 +99,11 @@
       "identifier": "https://nemar.org/dataset/nm000379",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.1101/2020.10.20.347831",
+      "identifier_type": "DOI",
+      "relation_type": "References"
     }
   ],
   "funding_references": [
@@ -74,19 +116,17 @@
       "award_number": "R01NS113804"
     }
   ],
-  "title": "Rapid coordination of effective learning by the human hippocampus: intracranial EEG during scene recognition with eye tracking",
-  "license": "CC-BY-4.0",
-  "dataset_type": "raw",
   "resource_type_general": "Dataset",
+  "resource_type_specific": "iEEG Dataset",
   "modalities": [
     "ieeg"
   ],
-  "resource_type_specific": "iEEG Dataset",
   "sizes": [
-    "41.69 GB (173 files)"
+    "41.69 GB (175 files)"
   ],
   "formats": [
     ".b2zen_unzipped",
+    ".class",
     ".cpp",
     ".csv",
     ".def",
@@ -102,6 +142,7 @@
     ".gitignore",
     ".h",
     ".html",
+    ".java",
     ".jpg",
     ".json",
     ".lib",
@@ -121,34 +162,8 @@
     ".txt",
     ".vhdr",
     ".vmrk",
+    ".yml",
     ".zip"
   ],
-  "description": "Stereo-EEG recordings from six patients with medically refractory epilepsy performing a scene recognition memory task with concurrent EyeLink eye tracking. Depth electrodes including the hippocampus were implanted for neurosurgical monitoring. The dataset supports investigation of how the human hippocampus rapidly coordinates effective learning, and is a lossless iEEG-BIDS re-packaging of the authors' Zenodo release.",
-  "methods_description": "Nihon Kohden amplifier recordings at 1 or 2 kHz with a hardware band-pass of 0.6-600 Hz, using AD-TECH depth electrodes. Participants studied sequences of 24 natural scene images across eight blocks, followed by a recognition test, while eye movements were tracked with EyeLink. Electrode contacts were localized in MNI space using SPM12 normalization and Bioimage Suite. ASCII exports were converted losslessly to BrainVision format.",
-  "keywords": [
-    {
-      "term": "intracranial EEG"
-    },
-    {
-      "term": "stereo-EEG"
-    },
-    {
-      "term": "Hippocampus",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D006624"
-    },
-    {
-      "term": "eye tracking"
-    },
-    {
-      "term": "theta rhythm"
-    },
-    {
-      "term": "episodic memory"
-    },
-    {
-      "term": "scene recognition"
-    }
-  ],
-  "source_hash": "8de9a066d157dee197dd48b631e903ed34401fada97a4286660ecffb202ef1f7"
+  "source_hash": "03940ead1ae47ace390d7237328781bce0e22202f5e5104314e8fbe0db9c0d2c"
 }
