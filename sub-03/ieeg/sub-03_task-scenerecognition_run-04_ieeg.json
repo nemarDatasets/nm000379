@@ -1,6 +1,7 @@
 {
   "TaskName": "scenerecognition",
-  "TaskDescription": "Scene recognition memory task (Presentation 18.0): per block, study of 24 novel natural scenes (Microsoft COCO 2017 train images with people, animals or food; 8 per category) followed by a recognition test, with concurrent EyeLink 1000 eye tracking. Each run is one block as exported by the authors (file *_sl_block<N>.m00).",
+  "TaskDescription": "Scene recognition memory task (Presentation 18.0): per block, study of 24 novel natural scenes (Microsoft COCO 2017 train images with people, animals or food; 8 per category) followed by a recognition test, with concurrent EyeLink 1000 eye tracking. Each run is one block as exported by the authors (file *_sl_block<N>.m00). Study: each scene shown for 3 s after a 0.5 s central fixation cross, intertrial interval 0.8-1.2 s (uniform); scenes subtended about 24 x 24 degrees. Test: 24 repeated and 24 novel (content-matched) scenes in pseudorandom order with gaze-contingent viewing (grey mask revealed through a Gaussian window, sigma 1.25 deg, at the gaze position), starting from a cued location (highest- or lowest-salience object by DeepGaze II); the participant indicated by button press whether the scene was repeated or novel; intertrial interval 0.8-1.2 s. Eye movements recorded at 500 Hz (EyeLink 1000 remote) (Kragel et al. 2021, Sci Adv 7(25):eabf7144, doi:10.1126/sciadv.abf7144, Materials and Methods 'Scene recognition task').",
+  "Instructions": "Study: view each scene. Test: search the gaze-contingent scene and press a button to indicate whether the scene was repeated (studied) or novel (Kragel et al. 2021, Sci Adv 7(25):eabf7144, doi:10.1126/sciadv.abf7144); verbatim instructions are not published.",
   "InstitutionName": "Northwestern Memorial Hospital Comprehensive Epilepsy Center",
   "InstitutionAddress": "Chicago, IL, USA",
   "Manufacturer": "Nihon Kohden",
@@ -15,6 +16,7 @@
   },
   "SoftwareFilters": "n/a",
   "iEEGReference": "Clinical reference and ground: a surgically implanted electrode strip facing the scalp or a scalp electrode (Kragel et al. 2021); channel names give the reference label (REF1 / Ref1). Bipolar re-referencing and DFT line-noise removal of the paper were NOT applied.",
+  "iEEGGround": "Clinical ground: a surgically implanted electrode strip facing the scalp or a scalp electrode (Kragel et al. 2021, Sci Adv 7(25):eabf7144, doi:10.1126/sciadv.abf7144)",
   "ElectrodeManufacturer": "AD-TECH Medical Instrument Co., Racine, WI",
   "iEEGElectrodeInfo": "Stereotactic EEG depth electrodes, contacts spaced 5 to 10 mm apart (Kragel et al. 2021)",
   "iEEGPlacementScheme": "Clinically determined depth electrodes with hippocampal coverage (inclusion criterion)",

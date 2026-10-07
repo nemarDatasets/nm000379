@@ -17,12 +17,44 @@
     }
   },
   "group": {
-    "Description": "Patients with medically refractory epilepsy with depth electrodes including hippocampus",
+    "Description": "Patients with medically refractory epilepsy with depth electrodes including hippocampus. Cohort (Kragel et al. 2021, Sci Adv 7(25):eabf7144, doi:10.1126/sciadv.abf7144, Materials and Methods 'Participants'): six participants (three females), average age 29 years (range 24 to 38); average FSIQ (WAIS-IV) 98.3 (range 76 to 112); no hippocampal sclerosis on neuroimaging in any participant; etiology typically cortical dysplasia (N = 4); seizure onset zones within mesial (N = 2), lateral (N = 1) or multiple (N = 1) temporal lobe structures, additional onset zones in the cingulate cortex (N = 1) and in nodular heterotopic grey matter lining the temporal and occipital horns of the lateral ventricle (N = 1). Not reported per participant (no per-participant table in the article or the Zenodo release), so per-row clinical values stay n/a.",
     "Levels": {
       "patient": "epilepsy patient"
     }
   },
   "n_runs": {
     "Description": "Number of task blocks (runs) with iEEG in the release"
+  },
+  "diagnosis": {
+    "Description": "Clinical diagnosis (all participants): medically refractory epilepsy, Northwestern Memorial Hospital Comprehensive Epilepsy Center (Kragel et al. 2021, Sci Adv 7(25):eabf7144, doi:10.1126/sciadv.abf7144)"
+  },
+  "implant_type": {
+    "Description": "Stereotactic EEG depth electrodes (AD-TECH, contacts spaced 5 to 10 mm), implanted for clinical monitoring; hippocampal coverage was the inclusion criterion (Kragel et al. 2021, Sci Adv 7(25):eabf7144, doi:10.1126/sciadv.abf7144)",
+    "Levels": {
+      "SEEG": "stereo-EEG depth electrodes"
+    }
+  },
+  "implanted_hemispheres": {
+    "Description": "Hemisphere(s) of the contacts in the authors' MNI coordinates (electrodes.tsv; x < 0 = left). Each electrode shaft lies in a single hemisphere.",
+    "Levels": {
+      "L": "left only",
+      "R": "right only",
+      "L;R": "both hemispheres"
+    }
+  },
+  "n_seeg_channels": {
+    "Description": "Number of SEEG channels in the run-01 export (channels.tsv type SEEG; excludes the sync/DC channel and, for sub-06, scalp EEG and Ref3)",
+    "Units": "count"
+  },
+  "n_electrode_contacts": {
+    "Description": "Number of contacts with MNI coordinates in the authors' localization file (data/localization/S<N>/S<N>_mni.csv)",
+    "Units": "count"
+  },
+  "sampling_frequency": {
+    "Description": "Sampling frequency of the Nihon Kohden exports (header SamplingInterval; the paper: 1 to 2 kHz per clinical needs)",
+    "Units": "Hz"
+  },
+  "recording_year_month": {
+    "Description": "Year and month of the task recording (YYYY-MM), from the '** DATE:' header of the participant's EyeLink EDF files in the release (eye-tracker clock; the day is not given). All EDF files of a participant share the same year and month."
   }
 }

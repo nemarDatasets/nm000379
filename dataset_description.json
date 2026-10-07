@@ -22,7 +22,9 @@
   "ReferencesAndLinks": [
     "https://doi.org/10.1126/sciadv.abf7144",
     "https://doi.org/10.5281/zenodo.4728229",
-    "https://cocodataset.org"
+    "https://cocodataset.org",
+    "https://doi.org/10.1101/2020.10.20.347831",
+    "https://pubmed.ncbi.nlm.nih.gov/34144985/"
   ],
   "DatasetDOI": "doi:10.5281/zenodo.4728229",
   "Keywords": [
@@ -33,7 +35,11 @@
     "theta",
     "episodic memory",
     "learning and memory",
-    "scene recognition"
+    "scene recognition",
+    "eye tracking",
+    "revisitation",
+    "theta oscillations",
+    "drug-resistant epilepsy"
   ],
   "SourceDatasets": [
     {

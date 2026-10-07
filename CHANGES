@@ -1,2 +1,8 @@
+1.0.1 2026-10-07
+  - 2026-10-07 metadata enrichment: participants (diagnosis, implant type, implanted hemispheres, channel/contact
+    counts, sampling frequency, recording year-month from EyeLink headers; age/sex cohort-level only),
+    participants.json cohort clinical summary, ieeg.json task timing/instructions/ground, README sections,
+    references/keywords. Sources: Kragel et al. 2021 Sci Adv (PMC8213228), Zenodo 4728229 release files.
+
 1.0.0 2026-10-06
   - Initial iEEG-BIDS packaging of Zenodo record 4728229 (no signal processing).

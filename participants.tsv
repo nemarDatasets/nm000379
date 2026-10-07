@@ -1,7 +1,7 @@
-participant_id	source_id	age	sex	group	n_runs
-sub-01	S1	n/a	n/a	patient	8
-sub-02	S2	n/a	n/a	patient	8
-sub-03	S3	n/a	n/a	patient	3
-sub-04	S4	n/a	n/a	patient	3
-sub-05	S5	n/a	n/a	patient	4
-sub-06	S6	n/a	n/a	patient	5
+participant_id	source_id	age	sex	group	n_runs	diagnosis	implant_type	implanted_hemispheres	n_seeg_channels	n_electrode_contacts	sampling_frequency	recording_year_month
+sub-01	S1	n/a	n/a	patient	8	medically refractory epilepsy	SEEG	L;R	102	102	2000	2019-05
+sub-02	S2	n/a	n/a	patient	8	medically refractory epilepsy	SEEG	R	117	154	2000	2019-07
+sub-03	S3	n/a	n/a	patient	3	medically refractory epilepsy	SEEG	R	146	145	2000	2019-07
+sub-04	S4	n/a	n/a	patient	3	medically refractory epilepsy	SEEG	R	130	130	1000	2019-10
+sub-05	S5	n/a	n/a	patient	4	medically refractory epilepsy	SEEG	L	161	161	1000	2020-02
+sub-06	S6	n/a	n/a	patient	5	medically refractory epilepsy	SEEG	L	166	165	1000	2020-06
