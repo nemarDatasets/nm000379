@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Rapid coordination of effective learning by the human hippocampus: intracranial EEG during scene recognition with eye tracking",
-  "description": "Stereo-EEG recordings from six patients with medically refractory epilepsy performing a scene recognition memory task with concurrent EyeLink eye tracking. Depth electrodes included the hippocampus, and the data support investigation of how the hippocampus coordinates learning during revisitation of scenes. The dataset is a lossless iEEG-BIDS re-packaging of the authors' public Zenodo release, with behavioral arrays, eye-tracking files, electrode localizations and analysis code in sourcedata.",
-  "methods_description": "Participants studied sequences of 24 natural scene images (Microsoft COCO) across eight blocks, followed by a recognition test with gaze-contingent viewing and repeated vs. novel judgments. Stereo-EEG was recorded with a Nihon Kohden amplifier at 1 or 2 kHz using AD-TECH depth electrodes, and eye movements were recorded at 500 Hz with an EyeLink 1000. The original ASCII exports were converted losslessly to BrainVision format.",
+  "description": "Stereo-EEG recordings from six patients with medically refractory epilepsy performing a scene recognition memory task with concurrent EyeLink eye tracking. The task comprised study and gaze-contingent recognition test phases across up to eight blocks per participant. The data are a lossless iEEG-BIDS re-packaging of the authors' Zenodo release, supporting investigation of hippocampal coordination of learning and memory-guided eye movements.",
+  "methods_description": "Nihon Kohden amplifier recordings at 1-2 kHz with AD-TECH depth electrodes, with eye movements recorded at 500 Hz using an EyeLink 1000. Participants studied 24 natural scenes per block and then judged repeated versus novel scenes under gaze-contingent viewing. Nihon Kohden ASCII exports were converted losslessly to BrainVision INT_32 format without filtering or re-referencing.",
   "license": "CC-BY-4.0",
   "dataset_type": "raw",
   "authors": {
@@ -60,15 +60,10 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D006624"
     },
     {
-      "term": "Eye Movements",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D005133"
+      "term": "eye tracking"
     },
     {
       "term": "episodic memory"
-    },
-    {
-      "term": "scene recognition"
     },
     {
       "term": "theta oscillations"
@@ -165,5 +160,5 @@
     ".yml",
     ".zip"
   ],
-  "source_hash": "03940ead1ae47ace390d7237328781bce0e22202f5e5104314e8fbe0db9c0d2c"
+  "source_hash": "52f24a28a7dad3f363ed37eb2dfa2d83d63f65553ffa0327edc598478b3976f8"
 }
