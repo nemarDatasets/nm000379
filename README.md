@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.nm000379-blue)](https://doi.org/10.82901/nemar.nm000379)
+
 # Rapid coordination of effective learning by the human hippocampus — intracranial EEG + eye tracking
 
 ## Overview
