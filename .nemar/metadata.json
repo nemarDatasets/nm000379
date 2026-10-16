@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Rapid coordination of effective learning by the human hippocampus: intracranial EEG during scene recognition with eye tracking",
-  "description": "Stereo-EEG recordings from six patients with medically refractory epilepsy performing a scene recognition memory task with concurrent EyeLink eye tracking. The data accompany a study of how the human hippocampus rapidly coordinates effective learning. They were re-packaged losslessly into iEEG-BIDS from the authors' public Zenodo release and include electrode MNI coordinates, behavioral arrays, eye-tracking files and analysis code in sourcedata.",
-  "methods_description": "Nihon Kohden amplifier recordings at 1 or 2 kHz with AD-TECH depth electrodes, while participants studied and then recognized natural scenes (8 blocks of 24 images). Gaze-contingent viewing at test was recorded with an EyeLink 1000 at 500 Hz. Nihon Kohden ASCII exports were converted losslessly to BrainVision INT_32 format with no filtering, resampling or re-referencing.",
+  "description": "Stereo-EEG recordings from six patients with medically refractory epilepsy performing a scene recognition memory task with concurrent EyeLink eye tracking. The dataset supports investigation of hippocampal coordination of learning and memory during gaze-contingent scene viewing. It is a lossless iEEG-BIDS re-packaging of the authors' public Zenodo release, including electrode coordinates and source data.",
+  "methods_description": "Nihon Kohden amplifier recordings at 1-2 kHz with depth electrodes (AD-TECH), converted losslessly from ASCII exports to BrainVision format. Participants studied 24 natural scenes per block and then completed a recognition test with gaze-contingent viewing. Eye movements were recorded at 500 Hz with an EyeLink 1000.",
   "license": "CC-BY-4.0",
   "dataset_type": "raw",
   "authors": {
