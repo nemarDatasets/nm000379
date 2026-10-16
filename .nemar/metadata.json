@@ -1,7 +1,7 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
-  "title": "Kragel-2021-rapid-10.1126/sciadv.abf7144",
+  "title": "Rapid coordination of effective learning by the human hippocampus: intracranial EEG during scene recognition with eye tracking",
   "description": "Stereo-EEG recordings from six patients with medically refractory epilepsy performing a scene recognition memory task with concurrent EyeLink eye tracking. The data accompany a study of how the human hippocampus rapidly coordinates effective learning. They were re-packaged losslessly into iEEG-BIDS from the authors' public Zenodo release and include electrode MNI coordinates, behavioral arrays, eye-tracking files and analysis code in sourcedata.",
   "methods_description": "Nihon Kohden amplifier recordings at 1 or 2 kHz with AD-TECH depth electrodes, while participants studied and then recognized natural scenes (8 blocks of 24 images). Gaze-contingent viewing at test was recorded with an EyeLink 1000 at 500 Hz. Nihon Kohden ASCII exports were converted losslessly to BrainVision INT_32 format with no filtering, resampling or re-referencing.",
   "license": "CC-BY-4.0",
@@ -158,5 +158,5 @@
     ".yml",
     ".zip"
   ],
-  "source_hash": "c900f420ee2f474d4243b1903a70ce6aa30af82be19b068b756b1b9adbd1861f"
+  "source_hash": "ae794cc908aa1e4c02afd895f580eb1e8e433b29bdb63a54755b274336102893"
 }
