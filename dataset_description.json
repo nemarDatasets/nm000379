@@ -1,5 +1,5 @@
 {
-  "Name": "Rapid coordination of effective learning by the human hippocampus: intracranial EEG during scene recognition with eye tracking",
+  "Name": "Kragel-2021-rapid-10.1126/sciadv.abf7144",
   "BIDSVersion": "1.10.0",
   "DatasetType": "raw",
   "License": "CC-BY-4.0",
@@ -54,5 +54,5 @@
       "Description": "Lossless re-packaging of the Nihon Kohden ASCII exports (2-decimal uV) into BrainVision INT_32 (resolution 0.01 uV); no filtering, resampling, re-referencing or channel removal."
     }
   ],
-  "Version": "1.0.0"
+  "Version": "1.0.1"
 }
