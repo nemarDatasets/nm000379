@@ -62,10 +62,32 @@ AD-TECH depth electrodes (contacts 5–10 mm apart). Participant 6 also has scal
   same scaling as all other channels.
 - No bipolar re-referencing, line-noise removal or epileptiform-data exclusion (all done in the paper's analysis) was
   applied.
-- **Events**: the release has no event table aligned to the iEEG samples. Task events in the paper are built by the
-  authors' code from the EyeLink EDF files, the behavioural arrays and the sync pulses (`code/preproc/create_events.m`,
-  `adjust_S1_events.m`). These inputs and the code are included under `sourcedata/`, but no `events.tsv` is generated
-  here, to avoid inventing an alignment.
+- **Events** (added Oct 2026): the release has no event table aligned to the iEEG samples. `*_events.tsv` files were
+  rebuilt with `code/fix-20261030_events.py`, a Python port of the authors' MATLAB pipeline in `sourcedata/`
+  (`preproc/create_events.m`, `preproc/adjust_S1_events.m`, `utils/get_onsets.m`, and the alignment rule of
+  `utils/epoch_data.m`): EyeLink EDF files are read with SR Research's EDF Access API (the library behind the authors'
+  `edfmex`), trial onsets are the sync pulses of the DC channel (MATLAB `findpeaks`, prominence 2 µV; encoding trials =
+  pulses 3:2:49, recognition trials = pulses 54:101), eye events (fixations, saccades, blinks) are placed at the trial
+  onset plus their EyeLink time relative to the trial's EyeLink message, and the behavioural columns (scene id,
+  condition, old/new, cue salience, response, response time) come from the behavioural arrays. Columns are described
+  in `task-scenerecognition_events.json`. Every run was checked by pairing its sync onsets with the EyeLink trial
+  messages: events were written only where the intervals agree (maximum residual 6-31 ms; every other block of the same
+  participant fits at 391 ms or worse) and the pulse count matches the authors' index rule. Written: sub-02 runs 1-8,
+  sub-04 runs 1-3, sub-05 runs 2-4, sub-06 runs 3 and 5 (study and test), and sub-01 runs 1-8 (study phase only).
+  No events were written for:
+  - sub-01 test phase: the test-phase sync pulses lag the EyeLink `recog` messages by 0.8-1.2 s (block-dependent;
+    -4 to +4 ms in the other participants). `adjust_S1_events.m` was written to correct this, but as released it
+    yields zero for every trial (EyeLink message events carry no end time, and MATLAB's unsigned arithmetic saturates
+    at 0), so the authors' correction cannot be reproduced.
+  - sub-03 (runs 1, 2, 4): 199-222 peaks detected on the sync channel instead of 102 (several peaks per pulse), so the
+    authors' pulse indices do not map to trials.
+  - sub-05 run 1: 51 pulses; they fit the test phase only (pulses 3-50, residual 15 ms), so the authors' indices do
+    not apply.
+  - sub-06 runs 1 and 2: run 1's pulses fit EyeLink/behavioural block 2 (16/20 ms) instead of block 1; run 2 (89
+    pulses) fits block 3, which run 3 also covers. sub-06 run 4: the authors set its onsets to NaN in `get_onsets.m`
+    ("missing encoding data for half of block 4").
+  - sub-04 run 1, study trial 1: no EyeLink `encode` message, so this trial and its eye events are absent, as in the
+    authors' code.
 - **Electrodes**: contact coordinates from `data/localization/S*/S*_mni.csv` (authors' MNI coordinates: T1 normalized with
   SPM12, deformations applied to CT-identified contacts with Bioimage Suite). They are labelled `space-IXI549Space`, the
   BIDS label for SPM12's normalization template; the extra csv columns are kept (`source_*`).
@@ -89,8 +111,9 @@ Data: CC BY 4.0 (Zenodo metadata license id `cc-by-4.0`). Code in `sourcedata/`:
 release.
 
 ## Known caveats
-- No `events.tsv`: task events must be rebuilt with the authors' code from the EyeLink files, behavioural arrays and
-  sync pulses (see "What was converted, and how").
+- Events exist for 24 of the 31 runs (sub-01: study phase only); see "What was converted, and how" for the runs left
+  out and why. Trial onsets are the sync-pulse times as in the authors' analysis; the pulses and EyeLink messages agree
+  to within about 30 ms.
 - Age and sex are only reported at group level; per-participant values are n/a.
 - Participant 3 has iEEG for blocks 1, 2 and 4 only; participants 4-6 have fewer blocks, as released.
 - Recording year-month comes from the eye-tracker clock (EDF headers), not from the iEEG exports.
