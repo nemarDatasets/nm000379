@@ -1,6 +1,7 @@
 1.0.3 2026-10-30
 
   - Add task events rebuilt with the authors' event pipeline
+  - Add derivatives/events-our-alignment: events for runs left out of the main tables, aligned with our own EyeLink-to-iEEG clock fit (not the authors' method)
 
 1.0.2 2026-10-16
   - Restore the descriptive dataset Name recorded in the v1.0.0 history. Update generated metadata title and source hash.

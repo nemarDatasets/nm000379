@@ -92,6 +92,16 @@ AD-TECH depth electrodes (contacts 5–10 mm apart). Participant 6 also has scal
   SPM12, deformations applied to CT-identified contacts with Bioimage Suite). They are labelled `space-IXI549Space`, the
   BIDS label for SPM12's normalization template; the extra csv columns are kept (`source_*`).
 
+## Derived events, our alignment (not the authors')
+`derivatives/events-our-alignment/` holds event tables for most runs and phases left out above: sub-01 test phase
+(runs 1-8), sub-03 runs 1, 2 and 4, sub-05 run 1 and sub-06 runs 1, 2 and 4. They were built with **our own alignment,
+not the authors' method**: `code/fix-20261031_events_our_alignment.py` fits a linear map from the EyeLink clock to each
+run's iEEG time on EyeLink trial messages paired with sync pulses by search, and accepts a run only under criteria
+stated in advance (all messages paired, residual <= 50 ms, unique mapping with a clear margin). The main `events.tsv`
+files are unchanged and `read_raw_bids` does not load these tables. Not recovered: the study phase of sub-03 runs 1
+and 4 (uniqueness criterion not met) and trials outside the recordings. Method, criteria and per-run residuals: the
+README and `alignment_residuals.tsv` in that folder.
+
 ## Analysis preprocessing in the paper (not applied here)
 Bipolar re-referencing of adjacent contacts; DFT removal of 60, 120 and 180 Hz; exclusion of data within 1 s of
 interictal epileptiform discharges (automated detector); bipolar pairs with at least one contact in hippocampus, dorsal
@@ -112,7 +122,8 @@ release.
 
 ## Known caveats
 - Events exist for 24 of the 31 runs (sub-01: study phase only); see "What was converted, and how" for the runs left
-  out and why. Trial onsets are the sync-pulse times as in the authors' analysis; the pulses and EyeLink messages agree
+  out and why. Events for most of the left-out runs, with our own alignment, are in
+  `derivatives/events-our-alignment/`. Trial onsets are the sync-pulse times as in the authors' analysis; the pulses and EyeLink messages agree
   to within about 30 ms.
 - Age and sex are only reported at group level; per-participant values are n/a.
 - Participant 3 has iEEG for blocks 1, 2 and 4 only; participants 4-6 have fewer blocks, as released.
