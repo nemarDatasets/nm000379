@@ -1,0 +1,99 @@
+{
+  "Description": "Task and eye-movement events rebuilt by code/fix-20261030_events.py, a Python port of the authors' MATLAB pipeline shipped in sourcedata/KragelEtal21_SciAdv/code (preproc/create_events.m, preproc/adjust_S1_events.m, utils/get_onsets.m; alignment rule of utils/epoch_data.m and bosc/run_bosc_epoch*.m). Inputs: EyeLink EDF files (data/eye), behavioural arrays (data/behav) and the DC sync channel of each run. Trial onsets are the sync-pulse onsets found as in get_onsets.m (findpeaks, MinPeakProminence 2 uV, one sample before the peak; encoding trials = pulses 3:2:49, recognition trials = pulses 54:101). Eye events (EyeLink parser: fixations, saccades, blinks) are placed at the trial onset plus their EyeLink time relative to the trial's EyeLink message ('encode' or 'recog'). Only events the authors' code selects are listed (eye events starting or ending inside the trial's EyeLink recording after the pre-image period; saccades ending right after a blink removed). Events were written only for runs where the pulse-to-trial mapping was verified against the EyeLink trial messages (see README, 'Events').",
+  "StimulusPresentation": {
+    "SoftwareName": "Presentation",
+    "SoftwareVersion": "18.0"
+  },
+  "onset": {
+    "Description": "Event onset relative to the first sample of the run, from the sync-pulse alignment described above.",
+    "Units": "s"
+  },
+  "duration": {
+    "Description": "Eye events: EyeLink end time minus start time. Trials: n/a (the authors' code defines no trial offset in the iEEG time base).",
+    "Units": "s"
+  },
+  "trial_type": {
+    "Description": "<phase>/<type> as in the authors' events structure (fields phase and type).",
+    "Levels": {
+      "encode/trial": "Study trial; onset = sync pulse at the pre-cue (fixation) onset, which get_onsets.m describes as starting about 750 ms before the image appears (the next pulse follows it by 766-769 ms in every checked run).",
+      "recog/trial": "Recognition test trial; onset = recognition sync pulse (simultaneous with the EyeLink 'recog' message).",
+      "encode/fixation": "Fixation during a study trial (EyeLink ENDFIX event).",
+      "encode/saccade": "Saccade during a study trial (EyeLink ENDSACC event, saccades ending right after a blink excluded).",
+      "encode/blink": "Blink during a study trial (EyeLink ENDBLINK event).",
+      "recog/fixation": "Fixation during a recognition trial.",
+      "recog/saccade": "Saccade during a recognition trial (blink-related saccades excluded).",
+      "recog/blink": "Blink during a recognition trial."
+    }
+  },
+  "sample": {
+    "Description": "Onset as a 0-based sample index of the run's iEEG data file."
+  },
+  "phase": {
+    "Description": "Task phase (authors' field phase).",
+    "Levels": {
+      "encode": "study phase",
+      "recog": "recognition test phase"
+    }
+  },
+  "block": {
+    "Description": "Task block (authors' field block); equals the run number (file S<N>_sl_block<k>.m00 -> run-<k>)."
+  },
+  "trial": {
+    "Description": "Trial number within the phase of the block (authors' field trial: index of the EyeLink recording period, 1-24 at study, 1-48 at test)."
+  },
+  "stim_id": {
+    "Description": "Microsoft COCO 2017 train image id of the scene (authors' field stim_idx, looked up in data/behav/S<N>/S<N>_stim_array*.txt; the released arrays hold file names 000000<id>.jpg)."
+  },
+  "condition": {
+    "Description": "Authors' field condition: row of the stimulus array (column 2 of S<N>_enc_array/S<N>_rec_array). The release does not name the rows."
+  },
+  "old": {
+    "Description": "Authors' field old: column 3 of the encoding/recognition array, OR-ed with whether the scene was shown in an earlier block (create_events.m).",
+    "Levels": {
+      "0": "novel",
+      "1": "repeated / previously presented"
+    }
+  },
+  "cue_salience": {
+    "Description": "Authors' field salience: column 4 of the encoding/recognition array. compute_recog_performance.m labels 1 as high- and 0 as low-salience cue (DeepGaze II).",
+    "Levels": {
+      "0": "low-salience cue",
+      "1": "high-salience cue"
+    }
+  },
+  "response": {
+    "Description": "Recognition response code from S<N>_output_array.txt column 5 (authors' field resp); n/a at study. compute_recog_performance.m treats 1 as a 'repeated' judgement, 4 as a 'novel' judgement and 2 as missing."
+  },
+  "response_time": {
+    "Description": "Recognition response time from S<N>_output_array.txt column 2 (authors' field rt, in ms), converted to seconds; n/a at study.",
+    "Units": "s"
+  },
+  "eyelink_time": {
+    "Description": "EyeLink tracker clock time of the event start (trials: the 'encode'/'recog' message), as in the EDF file.",
+    "Units": "ms"
+  },
+  "start_x": {
+    "Description": "Gaze x at event start (EyeLink gstx), screen coordinates (DISPLAY_COORDS 0 0 1920 1080). n/a for trials and blinks (EyeLink stores no gaze position for blinks; 0 in every blink record of this release).",
+    "Units": "pixel"
+  },
+  "start_y": {
+    "Description": "Gaze y at event start (EyeLink gsty). n/a for trials and blinks.",
+    "Units": "pixel"
+  },
+  "end_x": {
+    "Description": "Gaze x at event end (EyeLink genx). n/a for trials and blinks.",
+    "Units": "pixel"
+  },
+  "end_y": {
+    "Description": "Gaze y at event end (EyeLink geny). n/a for trials and blinks.",
+    "Units": "pixel"
+  },
+  "mean_x": {
+    "Description": "Average gaze x over the event (EyeLink gavx). n/a for trials, saccades and blinks (EyeLink stores no average for these; 0 in every such record of this release).",
+    "Units": "pixel"
+  },
+  "mean_y": {
+    "Description": "Average gaze y over the event (EyeLink gavy). n/a for trials, saccades and blinks.",
+    "Units": "pixel"
+  }
+}

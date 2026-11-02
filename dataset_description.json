@@ -54,5 +54,5 @@
       "Description": "Lossless re-packaging of the Nihon Kohden ASCII exports (2-decimal uV) into BrainVision INT_32 (resolution 0.01 uV); no filtering, resampling, re-referencing or channel removal."
     }
   ],
-  "Version": "1.0.2"
+  "Version": "1.0.3"
 }

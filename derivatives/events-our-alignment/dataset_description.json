@@ -1,0 +1,21 @@
+{
+  "Name": "nm000379 task events, our alignment (not the authors'), for runs the authors' sync-pulse indices do not align",
+  "BIDSVersion": "1.10.0",
+  "DatasetType": "derivative",
+  "License": "CC-BY-4.0",
+  "GeneratedBy": [
+    {
+      "Name": "fix-20261031_events_our_alignment.py",
+      "Description": "code/fix-20261031_events_our_alignment.py in the parent dataset (imports code/fix-20261030_events.py, the Python port of the authors' create_events.m / get_onsets.m). EyeLink-clock-to-run alignment by least-squares fit on searched message/sync-pulse pairs; not the authors' method. EyeLink EDF files read with SR Research EDF Access API 5.1.607."
+    }
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "doi:10.82901/nemar.nm000379"
+    },
+    {
+      "DOI": "doi:10.5281/zenodo.4728229"
+    }
+  ],
+  "HowToAcknowledge": "Cite the parent dataset and Kragel et al. 2021, Sci Adv 7(25):eabf7144, doi:10.1126/sciadv.abf7144; state that these events use the alignment of this NEMAR copy's depositors, not the authors'."
+}
