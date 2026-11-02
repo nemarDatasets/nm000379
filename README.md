@@ -62,6 +62,16 @@ AD-TECH depth electrodes (contacts 5–10 mm apart). Participant 6 also has scal
   same scaling as all other channels.
 - No bipolar re-referencing, line-noise removal or epileptiform-data exclusion (all done in the paper's analysis) was
   applied.
+- **Events**: the release has no event table aligned to the iEEG samples. Task events in the paper are built by the
+  authors' code from the EyeLink EDF files, the behavioural arrays and the sync pulses (`code/preproc/create_events.m`,
+  `adjust_S1_events.m`). These inputs and the code are included under `sourcedata/`, but no `events.tsv` is generated
+  here, to avoid inventing an alignment.
+- **Electrodes**: contact coordinates from `data/localization/S*/S*_mni.csv` (authors' MNI coordinates: T1 normalized with
+  SPM12, deformations applied to CT-identified contacts with Bioimage Suite). They are labelled `space-IXI549Space`, the
+  BIDS label for SPM12's normalization template; the extra csv columns are kept (`source_*`).
+
+Updated in version 1.0.3 by the depositors of this NEMAR copy (the published text above is kept unchanged; these items replace or extend it):
+
 - **Events** (added Oct 2026): the release has no event table aligned to the iEEG samples. `*_events.tsv` files were
   rebuilt with `code/fix-20261030_events.py`, a Python port of the authors' MATLAB pipeline in `sourcedata/`
   (`preproc/create_events.m`, `preproc/adjust_S1_events.m`, `utils/get_onsets.m`, and the alignment rule of
@@ -88,11 +98,6 @@ AD-TECH depth electrodes (contacts 5–10 mm apart). Participant 6 also has scal
     ("missing encoding data for half of block 4").
   - sub-04 run 1, study trial 1: no EyeLink `encode` message, so this trial and its eye events are absent, as in the
     authors' code.
-- **Electrodes**: contact coordinates from `data/localization/S*/S*_mni.csv` (authors' MNI coordinates: T1 normalized with
-  SPM12, deformations applied to CT-identified contacts with Bioimage Suite). They are labelled `space-IXI549Space`, the
-  BIDS label for SPM12's normalization template; the extra csv columns are kept (`source_*`).
-
-## Derived events, our alignment (not the authors')
 `derivatives/events-our-alignment/` holds event tables for most runs and phases left out above: sub-01 test phase
 (runs 1-8), sub-03 runs 1, 2 and 4, sub-05 run 1 and sub-06 runs 1, 2 and 4. They were built with **our own alignment,
 not the authors' method**: `code/fix-20261031_events_our_alignment.py` fits a linear map from the EyeLink clock to each
@@ -121,13 +126,18 @@ Data: CC BY 4.0 (Zenodo metadata license id `cc-by-4.0`). Code in `sourcedata/`:
 release.
 
 ## Known caveats
+- No `events.tsv`: task events must be rebuilt with the authors' code from the EyeLink files, behavioural arrays and
+  sync pulses (see "What was converted, and how").
+- Age and sex are only reported at group level; per-participant values are n/a.
+- Participant 3 has iEEG for blocks 1, 2 and 4 only; participants 4-6 have fewer blocks, as released.
+- Recording year-month comes from the eye-tracker clock (EDF headers), not from the iEEG exports.
+
+Updated in version 1.0.3 by the depositors of this NEMAR copy (the published text above is kept unchanged; these items replace or extend it):
+
 - Events exist for 24 of the 31 runs (sub-01: study phase only); see "What was converted, and how" for the runs left
   out and why. Events for most of the left-out runs, with our own alignment, are in
   `derivatives/events-our-alignment/`. Trial onsets are the sync-pulse times as in the authors' analysis; the pulses and EyeLink messages agree
   to within about 30 ms.
-- Age and sex are only reported at group level; per-participant values are n/a.
-- Participant 3 has iEEG for blocks 1, 2 and 4 only; participants 4-6 have fewer blocks, as released.
-- Recording year-month comes from the eye-tracker clock (EDF headers), not from the iEEG exports.
 
 ## How to load
 ```python

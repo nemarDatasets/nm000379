@@ -1,7 +1,14 @@
 1.0.3 2026-10-30
 
-  - Add task events rebuilt with the authors' event pipeline
-  - Add derivatives/events-our-alignment: events for runs left out of the main tables, aligned with our own EyeLink-to-iEEG clock fit (not the authors' method)
+  - events.tsv for 24 of the 31 runs (sub-01: study phase only) and task-scenerecognition_events.json: task events
+    rebuilt with code/fix-20261030_events.py, a Python port of the authors' MATLAB event pipeline in sourcedata/
+    (trial onsets = sync pulses; eye events and behavioural columns from the EyeLink and behavioural files).
+  - derivatives/events-our-alignment (21 files): events for runs and phases left out of the main tables (sub-01
+    test phase, sub-03 runs 1, 2 and 4, sub-05 run 1, sub-06 runs 1, 2 and 4), aligned with our own EyeLink-to-
+    iEEG clock fit, not the authors' method; code/fix-20261031_events_our_alignment.py; main events.tsv files
+    unaffected.
+  - README: the published text is kept unchanged; paragraphs added after it describe the events and the derivative
+    (the published statement that no events.tsv is generated is superseded).
 
 1.0.2 2026-10-16
   - Restore the descriptive dataset Name recorded in the v1.0.0 history. Update generated metadata title and source hash.
